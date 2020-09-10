@@ -26,6 +26,16 @@ class StarshipDetails extends Component {
 						</h3>
 						<h3>Crew: {starshipDetails.crew}</h3>
 						<h3>Passengers: {starshipDetails.passengers}</h3>
+						{starshipDetails.pilots.length ? (
+							<>
+								<h3>
+									{' '}
+									Pilots: {starshipDetails.pilots.length}
+								</h3>
+							</>
+						) : (
+							<p>There are no pilots for this ship.</p>
+						)}
 						<Link
 							to={{
 								pathname: '/',
